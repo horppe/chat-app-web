@@ -1,5 +1,5 @@
 {
-  "name": "nodejs_socketio_boilerplate",
+  "name": "chat_app_web_node",
   "version": "0.0.0",
   "private": true,
   "scripts": {

@@ -26,7 +26,7 @@ import users from './routes/users';
 
 
 
-app.locals.defaultPageTitle = 'nodejs_socketio_boilerplate';
+app.locals.defaultPageTitle = 'Chat App';
 
 // // view engine
 // templateUtil.registerPartials(`${__dirname}/views/partials`);
