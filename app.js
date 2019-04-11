@@ -8,24 +8,25 @@ import lessMiddleware from 'less-middleware';
 import passport from 'passport';
 import mongoose from 'mongoose';
 import { Strategy } from 'passport-local';
+import Account from './models/account';
 import flash from 'connect-flash';
 import hbs from 'hbs';
  import registerHBSHelpers from './helpers/registerHBSHelpers';
 // import hbsutils from 'hbs-utils';
-
-// routes are imported here, note any auth or init middleware are to be placed
-// above this line.
-import index from './routes/index';
-import users from './routes/users';
-
 const app = express();
 
 
 // const templateUtil = hbsutils(hbs);
 
 registerHBSHelpers(hbs, app);
+// routes are imported here, note any auth or init middleware are to be placed
+// above this line.
+import index from './routes/index';
+import users from './routes/users';
 
-app.locals.defaultPageTitle = 'Chat App - Web';
+
+
+app.locals.defaultPageTitle = 'nodejs_socketio_boilerplate';
 
 // // view engine
 // templateUtil.registerPartials(`${__dirname}/views/partials`);
@@ -62,7 +63,6 @@ app.use('/users', users);
 
 // passport account auth
 
-import Account from './models/account';
 passport.use(new Strategy(Account.authenticate()));
 passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());

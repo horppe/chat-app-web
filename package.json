@@ -1,5 +1,5 @@
 {
-  "name": "chat_app_web",
+  "name": "nodejs_socketio_boilerplate",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -15,6 +15,7 @@
   "dependencies": {
     "body-parser": "~1.18.2",
     "chai": "^4.1.2",
+    "connect-ensure-login": "^0.1.1",
     "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
@@ -23,6 +24,7 @@
     "handlebars-dateformat": "^1.1.1",
     "hbs": "~4.0.1",
     "hbs-utils": "0.0.4",
+    "jsonwebtoken": "^8.5.1",
     "less-middleware": "~2.2.1",
     "mocha": "^5.0.0",
     "mongoose": "^5.0.3",
