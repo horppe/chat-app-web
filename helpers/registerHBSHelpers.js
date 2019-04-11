@@ -14,7 +14,7 @@ hbs.localsAsTemplateData(app);
 hbs.registerHelper('helper_name', function(...) { ... });
 hbs.registerPartial('partial_name', 'partial value');
 */
-hbs.registerPartials(`../${__dirname}/views/partials`, () => {});
+hbs.registerPartials(`${__dirname}/../views/partials`, () => {});
 // hbs helpers
 hbs.registerHelper('link', function(text, options) {
   var attrs = [];
