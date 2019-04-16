@@ -6,6 +6,7 @@ client.on('connect', function(){
 })
 client.on('disconnect', function(socket){
     console.log("I am disconnected to the socket")
+    
 })
 
 function sendAuthToken(){

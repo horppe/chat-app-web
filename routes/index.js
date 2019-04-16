@@ -31,14 +31,14 @@ router.post('/register', (req, res, next) => {
                        return res.render('register', { error: err.message });
                      }
                      console.log('In Register')
-                     account.token = jwt.sign({ account }, Config.JWT_SECRET);
+                     account.token = jwt.sign({ id: account._id }, Config.JWT_SECRET);
                      await account.save();
                      passport.authenticate('local')(req, res, () => {
                        req.session.save((err) => {
                          if (err) {
                            return next(err);
                          }
-                         res.redirect('/users');
+                         res.redirect('/users/chat');
                        });
                      });
                     });
@@ -60,7 +60,7 @@ router.post('/login', passport.authenticate('local',
                 if (err) {
                   return next(err);
                 }
-                res.redirect('/users')
+                res.redirect('/users/search')
               });
 });
 

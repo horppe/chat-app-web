@@ -66,6 +66,13 @@ hbs.registerHelper('select', function(selected, options) {
                                                                       'selected="selected"$&');
   });
   
+  hbs.registerHelper('toLocaleTimeString', function(date){
+    return new Date(date).toLocaleTimeString();
+  })
+
+  hbs.registerHelper('getFirstWord', function(str){
+    return str.split(' ')[0];
+  })
   
   // helper use for comparision and operator
   
